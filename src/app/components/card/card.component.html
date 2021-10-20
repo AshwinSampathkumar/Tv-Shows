@@ -1,0 +1,55 @@
+<div class="card-container">
+  <div class="container-content">
+    <div class="movie">
+      <div class="movie-img" [style]="backgroundImage()"></div>
+      <div class="text-movie-cont">
+        <div class="mr-grid">
+          <div class="col1">
+            <h1 class="movie-title" (click)="getDetails()" [title]="data.show.name">{{ data.show.name }}</h1>
+            <ul class="movie-gen">
+              <li>{{data.show.language}}</li>
+              <li *ngIf="data.show.runtime">/ {{data.show.runtime}}</li>
+              <li *ngIf="data.show.genres.length">/ {{data.show.genres}}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mr-grid summary-row">
+          <div class="col2">
+            <h5>{{data.show.type}}</h5>
+          </div>
+          <div class="col2">
+            <ul class="movie-likes">
+              <li>Rating: {{data.show.rating.average ? data.show.rating.average : 5}}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mr-grid summary-row">
+          <div class="col2">
+            <h5>SUMMARY</h5>
+          </div>
+          <div class="col2">
+            <ul class="movie-likes">
+              <li>{{data.score}}% liked this movie</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mr-grid">
+          <div class="col1">
+            <p class="movie-description" [innerHTML]="data.show.summary">
+            </p>
+          </div>
+        </div>
+        <div class="mr-grid actors-row">
+          <div class="col1 justify-space-between">
+            <p class="movie-actors">
+              <strong>Premiered:</strong> {{data.show.premiered}}
+            </p>
+            <p class="movie-actors" *ngIf="data.show.network && data.show.network.country">
+              <strong>{{data.show.network.country.name}}</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

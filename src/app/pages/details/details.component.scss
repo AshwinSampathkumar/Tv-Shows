@@ -1,0 +1,159 @@
+@import "../../styles/global.scss";
+
+.details-container {
+  background-position: $center !important;
+  background-size: $cover !important;
+  background-repeat: $repeat !important;
+  width: 100%;
+  min-height: 100vh;
+  display: $block;
+}
+
+a {
+  text-decoration: $none;
+  color: $blue-anchor;
+}
+
+a:hover {
+  text-decoration: $underline;
+}
+
+.movie-card {
+  font: $details-font-family;
+  color: $movie-card-text;
+  padding: 2.5rem 0;
+}
+
+.container {
+  margin: 0 $auto;
+  width: 48.75rem;
+  min-height: 50.75rem;
+  background: $container-bg;
+  border-radius: 5px;
+  position: $relative;
+}
+
+.hero {
+  height: 21.375rem;
+  margin: 0;
+  position: $relative;
+  overflow: $hidden;
+  z-index: 1;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-position: $center !important;
+  background-size: $cover !important;
+  background-repeat: $repeat !important;
+}
+
+.hero:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: $absolute;
+  overflow: $hidden;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: $hidden;
+}
+
+.cover {
+  position: $absolute;
+  top: 10rem;
+  left: 2.5rem;
+  z-index: 2;
+  width: 11.6875rem;
+  height: 17.625rem;
+}
+
+.details {
+  padding: 11.875rem 0 0 17.5rem;
+
+  .title1 {
+    a {
+      color: $white;
+      font-size: 2.75rem;
+      line-height: 3.125rem;
+      margin-bottom: 0.8125rem;
+      position: $relative;
+      text-decoration: $none;
+      cursor: $pointer;
+      &:hover {
+        text-decoration: $underline;
+      }
+    }
+  }
+
+  .title2 {
+    color: $title-text;
+    font-size: 1.4375rem;
+    font-weight: 300;
+    margin-bottom: 0.9375rem;
+  }
+
+  .likes {
+    margin-right: 1.5rem;
+    color: $white;
+  }
+
+  .likes:before {
+    content: $like-icon;
+    position: $relative;
+    top: 2px;
+    padding-right: 7px;
+  }
+}
+
+.description {
+  bottom: 0px;
+  height: 12.5rem;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: $desc-text;
+}
+
+.column1 {
+  padding-left: 3.125rem;
+  padding-top: 7.5rem;
+  width: 13.75rem;
+  float: $left;
+  text-align: $center;
+}
+
+.tag {
+  background: $white;
+  border-radius: 0.625rem;
+  padding: 3px 8px;
+  font-size: 0.875rem;
+  margin-right: 4px;
+  line-height: 2.1875rem;
+  cursor: $pointer;
+  margin-bottom: 0.5rem;
+}
+
+.tag:hover {
+  background: $tag-hover;
+}
+
+.column2 {
+  padding-left: 2.5625rem;
+  padding-top: 1.875rem;
+  margin-left: 1.25rem;
+  width: 30rem;
+  float: $left;
+}
+
+.wrap {
+  display: $flex;
+  flex-wrap: $wrap;
+}
+
+.justify-space-between {
+  display: $flex;
+  justify-content: $space-between;
+}
+
+.movie-description {
+  max-height: 14.6875rem;
+  overflow: $auto;
+}

@@ -1,0 +1,50 @@
+$linear: linear;
+$left: left;
+$right: right;
+$top: top;
+$bottom: bottom;
+$block: block;
+$fixed: fixed;
+$flex: flex;
+$space-between: space-between;
+$relative: relative;
+$justify: justify;
+$absolute: absolute;
+$center: center;
+$cover: cover;
+$repeat: repeat;
+$no-repeat: no-repeat;
+$solid: solid;
+$auto: auto;
+$italic: italic;
+$contain: contain;
+$hidden: hidden;
+$ellipsis: ellipsis;
+$wrap: wrap;
+$nowrap: nowrap;
+$pointer: pointer;
+$underline: underline;
+$border-box: border-box;
+
+$none: none;
+
+$like-icon: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/icon_like.png");
+
+$webkit-shadow: -webkit-gradient(
+  $linear,
+  $left $top,
+  $left $bottom,
+  color-stop(0, $opacity-black-2),
+  color-stop(0.35, $opacity-black-2),
+  color-stop(0.5, $opacity-black-2),
+  color-stop(0.65, $opacity-black-2),
+  color-stop(0.85, $opacity-black-3),
+  color-stop(1, $black)
+);
+
+$card-shadow: $opacity-black-8 0px 50px 100px -20px, $opacity-black-9 0px 30px 60px -30px;
+
+$top-gradient: $top, $opacity-black-4 38%, $opacity-black-5 39%,
+  $opacity-black-6 53%, $opacity-black-7 55%;
+$bottom-gradient: to $bottom, $opacity-black-4 38%, $opacity-black-5 39%,
+  $opacity-black-6 53%, $opacity-black-7 55%;

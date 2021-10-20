@@ -1,0 +1,60 @@
+<section class="details-container" [style]="backgroundImage()">
+  <div class="details-content">
+    <div class="movie-card">
+      <div class="container">
+        <a href="movieData.url"
+          ><img [src]="movieData.image.medium" alt="cover" class="cover"
+        /></a>
+        <div class="hero" [style]="coverImage()">
+          <div class="details">
+            <div class="title1">
+              <a [href]="movieData.url">{{ movieData.name }}</a>
+            </div>
+
+            <!-- <span class="likes">{{ movieData.weight }}% likes</span> -->
+            <span class="likes" *ngIf="movieData.externals.tvrage"
+              >TvRage: <strong>{{ movieData.externals.tvrage }}</strong></span
+            >
+            <span class="likes" *ngIf="movieData.externals.thetvdb"
+              >The Tvdb:
+              <strong>{{ movieData.externals.thetvdb }}</strong></span
+            >
+          </div>
+        </div>
+        <div class="description">
+          <div class="column1 wrap">
+            <span class="tag" *ngFor="let genre of movieData.genres">{{
+              genre
+            }}</span>
+          </div>
+          <div class="column2">
+            <p>
+              <strong>{{ movieData.name }}:</strong>
+            </p>
+            <p class="justify-space-between">
+              <span><strong>Language:</strong> {{ movieData.language }}</span>
+              <span><strong>Type:</strong> {{ movieData.type }}</span>
+            </p>
+            <p class="justify-space-between">
+              <span
+                ><strong>Runtime:</strong>
+                {{ movieData.runtime }}</span
+              >
+              <span
+                ><strong>Premiered:</strong>
+                {{ movieData.premiered }}</span
+              >
+            </p>
+            <p class="justify-space-between">
+              <span
+                ><strong>Rating:</strong> {{ movieData.rating.average }}</span
+              >
+              <span><strong>Weight:</strong> {{ movieData.weight }}</span>
+            </p>
+            <p class="movie-description" [innerHTML]="movieData.summary"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
