@@ -8,7 +8,7 @@ export class CommonService {
   constructor() {}
 
   getDateFormat(data: string) {
-    const dateObject = new Date(data).toString();
+    const dateObject = new Date(data);
     const returnData = moment(dateObject).format('DD MMM YYYY').split(' ');
     returnData[0] = returnData[0] + 'th';
     return returnData.join(' ');

@@ -46,7 +46,7 @@
               >
             </p>
             <p class="justify-space-between">
-              <span
+              <span *ngIf="movieData.rating.average"
                 ><strong>Rating:</strong> {{ movieData.rating.average }}</span
               >
               <span><strong>Weight:</strong> {{ movieData.weight }}</span>
